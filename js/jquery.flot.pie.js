@@ -553,7 +553,7 @@ More detail and specific examples can be found in the included HTML file.
 
 				layer.save();
 				layer.beginPath();
-				layer.strokeStyle = options.series.pie.stroke.color;
+				layer.strokeStyle = "rgb(167, 88, 14)";
 				layer.arc(0, 0, innerRadius, 0, Math.PI * 2, false);
 				layer.stroke();
 				layer.closePath();

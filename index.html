@@ -38,6 +38,78 @@
 			tbody {
 				background-color: rgb(249, 242, 210);
 			}
+
+			.select {
+				width: 6vw;
+				height: 2vw;
+				font-size: 1.2vw;
+			}
+
+			.box {
+				margin:0 auto;
+				border-width:0.5vw;
+				border-style:double;
+				border-color:rgb(167, 88, 14);
+				width:24.5vw;
+				height:21vw;
+				font-size:1.5vw;
+				background-color: rgb(0, 221, 88);
+			}
+
+			#around {
+				position: absolute;
+				width: 5vw;
+				height: 2vw;
+				margin-top: -19vw;
+				margin-left: 1vw;
+				text-align: left;
+			}
+
+			.outcircle {
+				position: absolute;
+				width: 10vw;
+				height: 10vw;
+				margin-top: -15vw;
+				margin-left: 7vw;
+				border-radius: 50%;
+				background-color: rgb(255, 175, 1);
+			}
+
+			#out1 {
+				position: absolute;
+				width: 8vw;
+				height: 2vw;
+				margin-top: 4vw;
+				margin-left: 1vw;
+				text-align: left;
+			}
+
+			#out2 {
+				position: absolute;
+				width: 8vw;
+				height: 2vw;
+				margin-top: 4vw;
+				margin-left: 1vw;
+				text-align: right;
+			}
+
+			.incircle {
+				position: absolute;
+				width: 5vw;
+				height: 5vw;
+				margin-top: 2.5vw;
+				margin-left: 2.5vw;
+				border-radius: 50%;
+				background-color: rgb(255, 39, 1);
+			}
+
+			#in {
+				position: absolute;
+				width: 5vw;
+				height: 2vw;
+				margin-top: 1.5vw;
+				text-align: center;
+			}
 		</style>
 
 		<script type="text/javascript">			
@@ -48,7 +120,7 @@
 			for (var i = 0; i < series; i++) {
 				data[i] = {
 					label: "Series" + (i + 1),
-					data: Math.floor(100) + 1
+					data: 101
 				}
 			}
 
@@ -60,7 +132,7 @@
 				$.plot(placeholder, data, {
 					series: {
 						pie: { 
-							innerRadius: 0.35,
+							innerRadius: 0.5,
 							show: true
 						}
 					}
@@ -72,17 +144,22 @@
 			$("#button").click(function() {
 				placeholder.unbind();
 
-				for (var i = 0; i < series; i++) {
+				data[0]={
+					label: "台北",
+					data: 101
+				}
+
+				for (var i = 1; i < series; i++) {
 					data[i] = {
 						label: "Seriel" + (i + 1),
-						data: Math.floor(100) + 1
+						data: 101
 					}
 				}
 
 				$.plot(placeholder, data, {
 					series: {
 						pie: { 
-							innerRadius: 0.35,
+							innerRadius: 0.5,
 							show: true
 						}
 					}
@@ -92,6 +169,7 @@
 			});
 		});
 		</script>
+
 	</head>
 	<body style="">
 
@@ -100,7 +178,8 @@
 			<h1>Permaculture</h1>
 			<img src="./img/icon.png" class="head">
 		</div>
-		<!--//header-->		
+		<!--//header-->	
+
 		<!--navigation-->
 		<div class="top-nav">
 			<nav class="navbar navbar-default">
@@ -108,10 +187,19 @@
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Menu						
 					</button>
 				</div>
-
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="hvr-bounce-to-bottom active"><a href="index.html">Home</a></li>
+						<li class="hvr-bounce-to-bottom"><a href="#introduction">What is Permaculture</a></li>
+						<li class="hvr-bounce-to-bottom"><a href="#do">Do it yourself</a></li>
+					</ul>	
+					<div class="clearfix"> </div>
+				</div>	
 			</nav>		
 		</div>	
 		<!--//navigation-->
+
 		<!--baner-->
 		<div class="baner">
 			<div class="container">
@@ -169,25 +257,32 @@
 			</div>
 		</div>
 
+		
+		
+		<a name="introduction"><div class="news-info">
+				<div class="container">		
+					<h3 class="title">Introduction</h3>
+				</div>
+		</div></a>
+
 		<div class="main">
 			<div class="container">
 				<div class="main-grids">
 					<div class="col-md-6 main-left">
 						<img src="./img/img6.jpg" alt="">
-						<h4>ECO SOLUTIONS</h4>
-						<p>Temporibus autem quibusdam et aut officiis debitis aut
-							rerum necessitatibus saepe eveniet ut et voluptates repudiandae.</p>
-						<a href="https://p.w3layouts.com/demos/crops/web/#" class="more btn btn-1 btn-1b"> Read More</a>
+						<h4>自然農法</h4>
+						<p>指不施肥、不施農藥（除草劑）仿自然耕作方式，使用「自然」一詞是為了與慣行農法中施肥、施農藥的耕作方式有所區別。</p>
+						<a href="http://www.permaculture.org.tw/about-permaculture" class="more btn btn-1 btn-1b"> Read More</a>
 					</div>
 					<div class="col-md-6 main-right">
 						<div class="col-md-6 main-text">
 							<img src="./img/img7.jpg" alt="">
 						</div>
 						<div class="col-md-6 main-text">
-							<h4>ECO SOLUTIONS</h4>			
-							<p>Temporibus autem quibusdam et aut officiis debitis aut eveniet ut et voluptates repudiandae rerum necessitatibus saepe quibusdam et aut officiis debitis aut
-								rerum necessitatibus saepe eveniet ut et voluptates repudiandae </p>
-							<a href="https://p.w3layouts.com/demos/crops/web/#" class="more btn btn-1 btn-1b"> Read More</a>
+							<h4>樸門</h4>			
+							<p>Permaculture”是 “permanent”（永恆的）、“agriculture”（農業）和“culture”（文化）的縮寫字。
+								<br>在台灣，Permaculture曾被譯為永續栽培或樸門農藝。</p>
+							<a href="http://www.permaculture.org.tw/about-permaculture" class="more btn btn-1 btn-1b"> Read More</a>
 						</div>
 						<div class="clearfix"> </div>
 					</div>
@@ -198,36 +293,61 @@
 
 
 
-		<div class="news-info">
-			<div class="container">		
-				<h3 class="title">Design</h3>
+		<a name="do"><div class="news-info">
+			<div class="container">
+				<h3 class="title">Design Your Own</h3>
 			</div>
-		</div>
+		</div></a>
 
 		<!-- container -->
-		<div class="container">				
-			<div class="news" style="text-align: center;font-size: 16px">	
+		<div class="container">
+			<div class="news" style="text-align: center;font-size: 1.5vw">	
 				<form>
-					<select name="YourLocation">
-					　<option value="Taipei">台北</option>
-					　<option value="Taoyuan">桃園</option>
-					　<option value="Hsinchu">新竹</option>
-					　<option value="Miaoli">苗栗</option>
+					<select name="one" class="select">
+					　<option value="0">主要作物</option>
+					　<option value="1">桃園</option>
+					　<option value="2">新竹</option>
+					　<option value="3">苗栗</option>
 					</select>
 		
-					<select name="YourLocation">
-							　<option value="Taipei">台北</option>
-							　<option value="Taoyuan">桃園</option>
-							　<option value="Hsinchu">新竹</option>
-							　<option value="Miaoli">苗栗</option>
+					<select name="two" class="select">
+							　<option value="0">主要作物</option>
+							　<option value="1">桃園</option>
+							　<option value="2">新竹</option>
+							　<option value="3">苗栗</option>
+					</select>
+
+					<select name="three" class="select">
+							　<option value="0">主要作物</option>
+							　<option value="1">桃園</option>
+							　<option value="2">新竹</option>
+							　<option value="3">苗栗</option>
+					</select>
+
+					<select name="four" class="select">
+							　<option value="0">驅蟲作物</option>
+							　<option value="1">桃園</option>
+							　<option value="2">新竹</option>
+							　<option value="3">苗栗</option>
 					</select>
 		
-					<input type="button" value="submit" id="button" >
+					<input type="button" value="design" id="button" >
 				</form>
 				<br>
-				<div style="margin:0 auto;border-width:0.5vw;border-style:double;border-color:rgb(167, 88, 14);width:24vw;height:21vw;font-size:1.5vw">
+				<div class="box">
 					<div id="placeholder" class="demo-placeholder">
 					</div>
+
+					<div class="outcircle">
+						<div class="incircle">
+							<div id="in"></div>
+						</div>
+
+						<div id="out1"></div>
+						<div id="out2"></div>
+					</div>
+
+					<div id="around"></div>
 				</div>
 
 			</div><!-- //container -->	
@@ -237,7 +357,7 @@
 		
 		<div class="services" id="services">
 			<div class="container">
-				<h3 class="title">Services Overview</h3>
+				<h3 class="title">Fun for Everyone</h3>
 				<div class="service-grids">
 					<div class="col-md-4 srvc-grids-info">
 						<div class="srvc-img">
