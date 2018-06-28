@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://p.w3layouts.com/demos/crops/web/ -->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Permaculture</title>
+		<link href="./css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+		<link href="./css/template.css" type="text/css" rel="stylesheet" media="all">
+		<link href="./css/style.css" type="text/css" rel="stylesheet" media="all">
+		<link rel="icon" href="./img/icon.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="./img/icon.ico" type="image/x-icon" />
+		<!-- Custom Theme files -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="Permaculture">
+		<script async="" src="./js/analytics.js"></script><script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<script src="./js/jquery.js"></script>
+		<script src="https://m.servedby-buysellads.com/monetization.js" type="text/javascript" style="display: none !important;"></script>
+		<script language="javascript" type="text/javascript" src="js/jquery.flot.js"></script>
+		<script language="javascript" type="text/javascript" src="js/jquery.flot.pie.js"></script>
+		<style type="text/css">
+			h1 {
+				font-size: 5vw;
+			}
+
+			.head {
+				width: 5vw;
+				position: absolute;
+				top: 0.5vw;
+				left: 47.5vw;
+				opacity: 0.35;
+			}
+
+			#placeholder {  /*放圖的位置*/
+				width: 36vw;
+				height: 20vw; /*圓大小*/
+			}
+
+			tbody {
+				background-color: rgb(249, 242, 210);
+			}
+		</style>
+
+		<script type="text/javascript">			
+		$(function() {
+			var data = [],
+			series = 8;
+
+			for (var i = 0; i < series; i++) {
+				data[i] = {
+					label: "Series" + (i + 1),
+					data: Math.floor(100) + 1
+				}
+			}
+
+			var placeholder = $("#placeholder");
+
+			$( document ).ready(function() {
+				placeholder.unbind();
+
+				$.plot(placeholder, data, {
+					series: {
+						pie: { 
+							innerRadius: 0.35,
+							show: true
+						}
+					}
+				});
+
+				
+			});
+
+			$("#button").click(function() {
+				placeholder.unbind();
+
+				for (var i = 0; i < series; i++) {
+					data[i] = {
+						label: "Seriel" + (i + 1),
+						data: Math.floor(100) + 1
+					}
+				}
+
+				$.plot(placeholder, data, {
+					series: {
+						pie: { 
+							innerRadius: 0.35,
+							show: true
+						}
+					}
+				});
+
+				
+			});
+		});
+		</script>
+	</head>
+	<body style="">
+
+		<!--header-->
+		<div class="logo">
+			<h1>Permaculture</h1>
+			<img src="./img/icon.png" class="head">
+		</div>
+		<!--//header-->		
+		<!--navigation-->
+		<div class="top-nav">
+			<nav class="navbar navbar-default">
+				<div class="container">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Menu						
+					</button>
+				</div>
+
+			</nav>		
+		</div>	
+		<!--//navigation-->
+		<!--baner-->
+		<div class="baner">
+			<div class="container">
+				<div class="baner-grids">
+					<div class="col-md-6 baner-top">
+						<figure class="effect-bubba">
+							<img src="./img/img1.jpg" alt="">
+							<figcaption>
+								<h4>Enimet pulvinar posuere</h4>
+								<p>In sit amet sapien eros Integer dolore magna aliqua</p>	
+							</figcaption>			
+						</figure>	
+					</div>
+					<div class="col-md-6 baner-top">
+						<figure class="effect-bubba">
+							<img src="./img/img2.jpg" alt="">
+							<figcaption>
+								<h4>Enimet pulvinar posuere</h4>
+								<p>In sit amet sapien eros Integer dolore magna aliqua</p>	
+							</figcaption>			
+						</figure>	
+					</div>
+					<div class="clearfix"> </div>
+					<div class="baner-row">
+						<div class="col-md-4 baner-bottom">
+							<figure class="effect-bubba">
+								<img src="./img/img3.jpg" alt="">
+								<figcaption>
+									<h4>Enimet pulvinar posuere</h4>
+									<p>In sit amet sapien eros Integer dolore magna aliqua</p>	
+								</figcaption>			
+							</figure>	
+						</div>
+						<div class="col-md-4 baner-bottom">
+							<figure class="effect-bubba">
+								<img src="./img/img4.jpg" alt="">
+								<figcaption>
+									<h4>Enimet pulvinar posuere</h4>
+									<p>In sit amet sapien eros Integer dolore magna aliqua</p>	
+								</figcaption>			
+							</figure>	
+						</div>
+						<div class="col-md-4 baner-bottom">
+							<figure class="effect-bubba">
+								<img src="./img/img5.jpg" alt="">
+								<figcaption>
+									<h4>Enimet pulvinar posuere</h4>
+									<p>In sit amet sapien eros Integer dolore magna aliqua</p>	
+								</figcaption>			
+							</figure>	
+						</div>
+						<div class="clearfix"> </div>
+					</div>				
+				</div>
+			</div>
+		</div>
+
+		<div class="main">
+			<div class="container">
+				<div class="main-grids">
+					<div class="col-md-6 main-left">
+						<img src="./img/img6.jpg" alt="">
+						<h4>ECO SOLUTIONS</h4>
+						<p>Temporibus autem quibusdam et aut officiis debitis aut
+							rerum necessitatibus saepe eveniet ut et voluptates repudiandae.</p>
+						<a href="https://p.w3layouts.com/demos/crops/web/#" class="more btn btn-1 btn-1b"> Read More</a>
+					</div>
+					<div class="col-md-6 main-right">
+						<div class="col-md-6 main-text">
+							<img src="./img/img7.jpg" alt="">
+						</div>
+						<div class="col-md-6 main-text">
+							<h4>ECO SOLUTIONS</h4>			
+							<p>Temporibus autem quibusdam et aut officiis debitis aut eveniet ut et voluptates repudiandae rerum necessitatibus saepe quibusdam et aut officiis debitis aut
+								rerum necessitatibus saepe eveniet ut et voluptates repudiandae </p>
+							<a href="https://p.w3layouts.com/demos/crops/web/#" class="more btn btn-1 btn-1b"> Read More</a>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>			
+			</div>
+		</div>
+
+
+
+		<div class="news-info">
+			<div class="container">		
+				<h3 class="title">Design</h3>
+			</div>
+		</div>
+
+		<!-- container -->
+		<div class="container">				
+			<div class="news" style="text-align: center;font-size: 16px">	
+				<form>
+					<select name="YourLocation">
+					　<option value="Taipei">台北</option>
+					　<option value="Taoyuan">桃園</option>
+					　<option value="Hsinchu">新竹</option>
+					　<option value="Miaoli">苗栗</option>
+					</select>
+		
+					<select name="YourLocation">
+							　<option value="Taipei">台北</option>
+							　<option value="Taoyuan">桃園</option>
+							　<option value="Hsinchu">新竹</option>
+							　<option value="Miaoli">苗栗</option>
+					</select>
+		
+					<input type="button" value="submit" id="button" >
+				</form>
+				<br>
+				<div style="margin:0 auto;border-width:0.5vw;border-style:double;border-color:rgb(167, 88, 14);width:24vw;height:21vw;font-size:1.5vw">
+					<div id="placeholder" class="demo-placeholder">
+					</div>
+				</div>
+
+			</div><!-- //container -->	
+		</div>
+
+
+		
+		<div class="services" id="services">
+			<div class="container">
+				<h3 class="title">Services Overview</h3>
+				<div class="service-grids">
+					<div class="col-md-4 srvc-grids-info">
+						<div class="srvc-img">
+							<span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
+						</div>
+						<h5>Ultrices</h5>
+						<p>Claritas est etiam processus dynaicus qui Mirum est notare quam </p>
+					</div>
+					<div class="col-md-4 srvc-grids-info">
+						<div class="srvc-img">
+							<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+						</div>
+						<h5>Tltrices</h5>
+						<p>Claritas est etiam processus dynaicus qui Mirum est notare quam </p>
+					</div>
+					<div class="col-md-4 srvc-grids-info">
+						<div class="srvc-img">
+							<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+						</div>
+						<h5>Cltrices</h5>
+						<p>Claritas est etiam processus dynaicus qui Mirum est notare quam </p>
+					</div>
+					<div class="col-md-4 srvc-grids-info">
+						<div class="srvc-img">
+							<span class="glyphicon glyphicon-grain" aria-hidden="true"></span>
+						</div>
+						<h5>Fltrices</h5>
+						<p>Claritas est etiam processus dynaicus qui Mirum est notare quam </p>
+					</div>
+					<div class="col-md-4 srvc-grids-info">
+						<div class="srvc-img">
+							<span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+						</div>
+						<h5>Processus</h5>
+						<p>Claritas est etiam processus dynaicus qui Mirum est notare quam </p>
+					</div>
+					<div class="col-md-4 srvc-grids-info">
+						<div class="srvc-img">
+							<span class="glyphicon glyphicon-education" aria-hidden="true"></span>
+						</div>
+						<h5>Sequitur</h5>
+						<p>Claritas est etiam processus dynaicus qui Mirum est notare quam </p>
+					</div>
+					<div class="clearfix"> </div>				
+				</div>
+			</div>
+		</div>
+	
+		<div class="copy">
+			<div class="container">
+				<div class="copy-left">
+					<p>Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</body>
+</html>
